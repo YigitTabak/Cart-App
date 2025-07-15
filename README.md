@@ -1,5 +1,7 @@
 # React + Vite
 
+![Image Alt](https://github.com/YigitTabak/Cart-App/blob/97228f379212adcb40452adcc606cbac90a7272c/cartapp.jpg)
+
 This template provides a minimal setup to get React working in Vite with HMR and
 some ESLint rules.
 
