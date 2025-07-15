@@ -1,0 +1,149 @@
+.app-container {
+  display: flex;
+  background-color: rgb(240, 240, 240);
+  gap: 10px;
+}
+
+.filters-app {
+  flex: 1;
+  order: 1;
+  min-height: 100vh;
+  margin-top: 60px;
+  padding-top: 30px;
+}
+
+.products-app {
+  flex: 3;
+  order: 2;
+}
+
+.cart-app {
+  flex: 1;
+  order: 3;
+  margin-top: 60px;
+}
+
+.app-container.detail-view {
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.product-detail-app {
+  flex: 4;
+  order: 1;
+}
+
+@media (max-width: 1024px) {
+  .products-app {
+    flex: 2;
+    order: 2;
+  }
+
+  .cart-app {
+    height: 400px;
+    order: 3;
+    flex: 1;
+  }
+  .filters-app {
+    flex: 1;
+    order: 1;
+    min-height: 400px;
+    margin-top: 8%;
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .app-container.detail-view {
+    flex-direction: column;
+  }
+  .product-detail-app {
+    order: 2;
+  }
+
+  .products-app {
+    flex: 1;
+    order: 3;
+  }
+
+  .cart-app {
+    height: 400px;
+    order: 1;
+  }
+  .filters-app {
+    flex: 1;
+    order: 2;
+    min-height: 400px;
+    margin-top: 00px;
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 426px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .app-container.detail-view {
+    flex-direction: column;
+  }
+  .product-detail-app {
+    order: 2;
+  }
+
+  .filters-app {
+    flex: 1;
+    order: 2;
+  }
+
+  .products-app {
+    flex: 1;
+    order: 3;
+  }
+
+  .cart-app {
+    height: 400px;
+    order: 1;
+  }
+  .filters-app {
+    flex: 1;
+    min-height: 400px;
+    margin-top: 00px;
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 375px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .app-container.detail-view {
+    flex-direction: column;
+  }
+  .product-detail-app {
+    order: 2;
+  }
+
+  .filters-app {
+    flex: 1;
+    order: 2;
+  }
+
+  .products-app {
+    flex: 1;
+    order: 3;
+  }
+
+  .cart-app {
+    height: 400px;
+    order: 1;
+  }
+  .filters-app {
+    flex: 1;
+    min-height: 400px;
+    margin-top: 00px;
+    padding-top: 0px;
+  }
+}
