@@ -1,6 +1,6 @@
 
-![Image Alt]()
-![Image Alt]()
+![Image Alt](https://github.com/YigitTabak/Cart-App/blob/master/src/assets/CartHome.png?raw=true)
+![Image Alt](https://github.com/YigitTabak/Cart-App/blob/master/src/assets/CartResp.png?raw=true)
 
 This project is a shopping cart application built with Vite and React. It allows users to list, filter, search, and add products to their cart.
 
