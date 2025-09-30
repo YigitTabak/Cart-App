@@ -1,6 +1,6 @@
 import React from 'react'
 import './Cart.css'
-import { useStore } from '../store/AppContext'
+import { useStore } from '../../store/AppContext'
 
 const Cart = () => {
   const { cartItems, increaseQuantity, decreaseQuantity } = useStore()

@@ -1,4 +1,4 @@
-import dummy from '../assets/dummy.png'
+import placeholder from '../../assets/placeholder.png'
 import { useNavigate } from 'react-router-dom'
 import './Card.css'
 
@@ -7,7 +7,7 @@ const Card = ({ product, addToCart }) => {
   return (
     <div className='card-box' data-testid="product-card">
       <img
-        src={dummy}
+        src={placeholder}
         alt={product.name}
         className='card-image'
         key={product.id}

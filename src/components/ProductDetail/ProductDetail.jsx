@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import './ProductDetail.css'
-import { useStore } from '../store/AppContext'
-import dummy from '../assets/dummy.png'
+import { useStore } from '../../store/AppContext'
+import placeholder from '../../assets/placeholder.png'
 const ProductDetail = () => {
   const { id } = useParams()
   const { addToCart } = useStore()
@@ -31,17 +31,21 @@ const ProductDetail = () => {
   return (
     <div className='productDetail-container'>
       <div className='productDetail-wrapper'>
-        <img src={dummy} alt={product.name} className='productDetail-image' />
+        <img src={placeholder} alt={product.name} className='productDetail-image' />
         <div className='productDetail-infos'>
           <h2 className='productDetail-name'>{product.name}</h2>
-          <p className='productDetail-price'>{product.price} TL</p>
+          <p className='productDetail-price'>{product.price} $</p>
           <button
             onClick={() => addToCart(product)}
             className='productDetail-button'
           >
             Add to Cart
           </button>
-          <p className='productDetail-desc'>{product.description}</p>
+          <p className='productDetail-desc'>
+            {product.description && product.description.split(' ').length > 30
+              ? product.description.split(' ').slice(0, 30).join(' ') + '...'
+              : product.description}
+          </p>
         </div>
       </div>
     </div>

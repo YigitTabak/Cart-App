@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useStore } from '../store/AppContext'
+import { useStore } from '../../store/AppContext'
 import './Filters.css'
 import { useSearchParams } from 'react-router-dom'
 

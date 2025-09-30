@@ -1,9 +1,9 @@
 import './App.css'
-import Header from './components/Header'
-import Products from './components/Products'
-import Filters from './components/Filters'
-import Cart from './components/Cart'
-import ProductDetail from './components/ProductDetail'
+import Navbar from './components/Navbar/Navbar'
+import Products from './components/Products/Products'
+import Filters from './components/Filters/Filters'
+import Cart from './components/Cart/Cart'
+import ProductDetail from './components/ProductDetail/ProductDetail'
 import { AppProvider } from './store/AppContext'
 import {
   BrowserRouter as Router,
@@ -16,9 +16,7 @@ function App() {
   return (
     <AppProvider>
       <Router>
-        <div className='header-app'>
-          <Header />
-        </div>
+          <Navbar />
         <Routes>
           <Route path='/*' element={<Content />} />
         </Routes>

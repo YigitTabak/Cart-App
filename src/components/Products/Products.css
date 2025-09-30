@@ -1,0 +1,48 @@
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  padding: 5px;
+  .no-results {
+    font-size: 1.12rem;
+    font-weight: bold;
+    color: #555;
+    margin-top: 20%;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 0;
+
+  .pagination-button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(136, 20, 136);
+    color: white;
+  }
+
+  .pagination-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .pagination-info {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 768px) {
+  .products{
+    margin-top: 5px;
+  }
+}

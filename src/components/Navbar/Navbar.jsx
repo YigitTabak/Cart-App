@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import './Header.css'
-import { useStore } from '../store/AppContext'
+import './Navbar.css'
+import { useStore } from '../../store/AppContext'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 
-const Header = () => {
+const Navbar = () => {
   const { cartItems, setSearchTerm, searchTerm } = useStore()
   const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
@@ -23,12 +23,12 @@ const Header = () => {
   }, [searchTerm, setSearchParams])
 
   return (
-    <div className='container'>
-      <div className='header-wrapper'>
-        <div className='header-text'>
-          <h1 onClick={() => navigate(`/`)}>Cart App</h1>
+    <div className='navbar-container'>
+      <div className='navbar-wrapper'>
+        <div className='navbar-text'>
+          <p onClick={() => navigate(`/`)}>Cart App</p>
         </div>
-        <div className='header-search'>
+        <div className='navbar-search'>
           <input
             type='text'
             placeholder='Search...'
@@ -37,9 +37,9 @@ const Header = () => {
         </div>
       </div>
 
-      <div className='header-icons-wrapper'>
-        <div className='header-icons'>
-          <div className='header-cart'>
+      <div className='navbar-icons-wrapper'>
+        <div className='navbar-icons'>
+          <div className='navbar-cart'>
             <i className='fa-solid fa-cart-shopping'></i>
             {cartItems.reduce(
               (total, item) => total + item.price * item.quantity,
@@ -47,7 +47,7 @@ const Header = () => {
             )}
             $
           </div>
-          <div className='header-profile'>
+          <div className='navbar-profile'>
             <i className='fa-solid fa-user'></i>Yiğit
           </div>
         </div>
@@ -56,4 +56,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Navbar

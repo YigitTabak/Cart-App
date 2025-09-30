@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import './Product.css'
-import Card from './Card'
-import { useStore } from '../store/AppContext'
-import { sortProducts } from '../util/filters.util'
+import './Products.css'
+import Card from '../Card/Card'
+import { useStore } from '../../store/AppContext'
+import { sortProducts } from '../../util/filters.util'
 
 const Products = () => {
   const { addToCart, products, selectedSort } = useStore()
@@ -38,7 +38,7 @@ const Products = () => {
             <Card key={product.id} product={product} addToCart={addToCart} />
           ))
         ) : (
-          <p className='no-results'>Ürün bulunamadı.</p>
+          <p className='no-results'>No products found.</p>
         )}
       </div>
       {products.length > productsPerPage && (
